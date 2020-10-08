@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project de Sales</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="CSS/index.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js">
+	</script>
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ProjectdeSales.kgdowney.repl.co">
+				<p>Project de Sales</p>
+			</a>
+		</div>
+	</nav>
+
+<!-- Main hero section -->
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Client Details
+      </h1>
+      <h3 class="subtitle">
+        Enter in client details.
+      </h3>
+    </div>
+  </div>
+</section>
+
+<form action="/create" method="POST">
+  <label for="name" >Client name *</label><br>
+  <input type="text" id="name" name="name" class="textInput" placeholder="John Smith" required>
+  <br>
+  <label for="address" >Legal Address *</label><br>
+  <input type="text" name="address" class="textInput" placeholder="123 American Street" required>
+  <br>
+  <label for="telephone" >Client telephone *</label><br>
+  <input type="text" name="telephone" class="textInput" placeholder="18005542020" required>
+  <br>
+  <label for="email" >Client Email *</label><br>
+  <input type="text" name="email" class="textInput" placeholder="jsmith@gmail.com" required>
+  <br>
+  <label for="note" >Note</label><br>
+  <input type="text" name="note" class="textInput" placeholder="The client said...">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Project de Sales</strong> by <a href="https://github.com/kgdowney">Keith Downey</a>. 
+    </p>
+  </div>
+</footer>
+</body>
+</html>

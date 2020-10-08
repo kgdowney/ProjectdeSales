@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project de Sales</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js">
+	</script>
+</head>
+
+<body>
+  <!-- Nav bar -->
+	<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ProjectdeSales.kgdowney.repl.co">
+				<p>Project de Sales</p>
+			</a>
+		</div>
+	</nav>
+<!-- Main Hero section -->
+	<section class="hero is-primary is-bold">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					Welcome to Project de Sales
+				</h1>
+				<h3 class="subtitle">
+					"To exercise justice well, we must make ourselves buyer when we sell, or seller when we buy."
+				</h3>
+			</div>
+			<!-- This is the card, where buttons will be placed -->
+			<br>
+  <div class="columns">  
+    <div class="column">
+      <div class="card">
+        <header class="card-header">
+        <p class="card-header-title">
+          New Lead
+        </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+          Find out what your client or prospect needs the most.
+          <br>
+          </div>
+        </div>
+        <form action="/create" method="GET">
+          <button class="button is-primary" input type="submit">Create</button> 
+        </form>
+      </div>
+    </div>  
+    <br>
+
+<!-- 2nd card -->
+<div class="column">
+ <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Search
+    </p>
+  </header>
+    <div class="card-content">
+      <div class="content">
+      Search, review, update and delete previous leads.
+      <br>
+      </div>
+    </div>
+    <br>
+    <form action="/get" method="GET">
+      <button class="button is-primary" input type="submit">Update/Delete</button>  
+    </form>
+  </div>
+</div>
+</section>
+</div>
+  </div>
+</div>  
+</div>  
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Project de Sales</strong> by <a href="https://github.com/kgdowney">Keith Downey</a>. 
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

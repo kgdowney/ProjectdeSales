@@ -1,0 +1,36 @@
+html
+  body
+    p #{message}
+    h2= 'Client Details'
+    form(method='POST' action='/update')
+      input(type='hidden' id='oldname' name='oldname' value=oldname)
+      input(type='hidden' id='oldaddress' name='oldaddress' value=oldaddress)
+      input(type='hidden' id='oldtelephone' name='oldtelephone' value=oldtelephone)
+      input(type='hidden' id='oldemail' name='oldemail' value=oldemail)
+      input(type='hidden' id='oldnote' name='oldnote' value=oldnote)
+      label(for='name') Client name:
+      br
+      input(type='text', placeholder='John Smith' name='name' value=name)
+      br
+      label(for='address') Client address:
+      br
+      input(type='text', placeholder='42 Wallaby Way, Sydney' name='address', value=address)
+      br
+      label(for='telephone') Client telephone:
+      br
+      input(type='text', placeholder='+275554202' name='telephone', value=telephone)
+      br
+      label(type='email', placeholder='john@gmail.com', name='email', value=email)
+      br
+      label(for='note') Notes:
+      br
+      input(type='text', placeholder='Likes unicorns', name='note', value=note)
+      br
+      button(type='submit' formaction='/update') Update
+      button(type='submit' formaction='/delete') Delete
+
+      footer(class="footer")
+      div(class="container")
+        div(class="content has-text-centered")
+            p!= "<strong>Bulma-Pug</strong> by <a href=\"https://github.com/Edofre/bulma-pug\">Edo Freriks</a>. <a class=\"icon\" href=\"https://github.com/Edofre/bulma-pug\"><i class=\"fa fa-github\"></i>"
+
