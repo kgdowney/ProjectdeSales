@@ -27,15 +27,15 @@
 				<h1 class="title">
 					Welcome to Project de Sales
 				</h1>
-				<h3 class="subtitle">
-					"To exercise justice well, we must make ourselves buyer when we sell, or seller when we buy."
+				<h3 class="subtitle mt-2">
+					"To exercise justice well, we must make ourselves buyer when we sell, or seller when we buy." - St. Francis de Sales
 				</h3>
 			</div>
 			<!-- This is the card, where buttons will be placed -->
 			<br>
   <div class="columns">  
     <div class="column">
-      <div class="card">
+      <div class="card mt-2">
         <header class="card-header">
         <p class="card-header-title">
           New Lead
@@ -47,9 +47,11 @@
           <br>
           </div>
         </div>
-        <form action="/create" method="GET">
-          <button class="button is-primary" input type="submit">Create</button> 
-        </form>
+        <div class="has-text-centered">
+          <form action="/create" method="GET">
+            <button class="button is-primary mb-5" input type="submit">Create</button> 
+          </form>
+        </div>
       </div>
     </div>  
     <br>
@@ -59,7 +61,7 @@
  <div class="card">
   <header class="card-header">
     <p class="card-header-title">
-      Search
+      Update or Modify
     </p>
   </header>
     <div class="card-content">
@@ -69,9 +71,11 @@
       </div>
     </div>
     <br>
-    <form action="/get" method="GET">
-      <button class="button is-primary" input type="submit">Update/Delete</button>  
-    </form>
+    <div class="has-text-centered">
+      <form action="/get" method="GET">
+        <button class="button is-primary mb-5" input type="submit">Search</button>  
+      </form>
+    </div>
   </div>
 </div>
 </section>

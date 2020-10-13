@@ -34,25 +34,60 @@
     </div>
   </div>
 </section>
+<div class="container is-fluid mt-5">
+  <div class="notification is-primary">
 
-<form action="/create" method="POST">
-  <label for="name" >Client name *</label><br>
-  <input type="text" id="name" name="name" class="textInput" placeholder="John Smith" required>
-  <br>
-  <label for="address" >Legal Address *</label><br>
-  <input type="text" name="address" class="textInput" placeholder="123 American Street" required>
-  <br>
-  <label for="telephone" >Client telephone *</label><br>
-  <input type="text" name="telephone" class="textInput" placeholder="18005542020" required>
-  <br>
-  <label for="email" >Client Email *</label><br>
-  <input type="text" name="email" class="textInput" placeholder="jsmith@gmail.com" required>
-  <br>
-  <label for="note" >Note</label><br>
-  <input type="text" name="note" class="textInput" placeholder="The client said...">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
+    <form action="/create" method="POST">
+      <div class="field">
+        <label for="name" >Client name</label><br>
+        <input type="text" id="name" name="name" class="input" placeholder="John Smith" required>
+      </div>
+      
+      <div class="field">
+        <label for="address" >Legal Address </label><br>
+        <input type="text" name="address" class="input" placeholder="123 American Street" required>
+      </div>  
+      
+      <div class="field">
+        <label for="telephone" >Client telephone </label><br>
+        <input type="text" name="telephone" class="input" placeholder="18005542020" required>
+      </div>
+
+      <div class="field">
+        <label for="email" >Client Email </label><br>
+        <input type="text" name="email" class="input" placeholder="jsmith@gmail.com" required>
+      </div>
+      <div class="field">
+        <label for="dropdown">Called in for</label><br>
+        <div class="select" placeholder="Client called in for">
+          <select>
+            <option>NC</option>
+            <option>AC</option>
+            <option>FS</option>
+            <option>TLM</option>
+            <option>H&B</option>
+            <option>RS</option>
+            <option>HRBPO</option>
+          </select>
+        </div>
+       </div> 
+      <div class="field">
+        <div class="control">
+          <label for="note" >Note</label><br>
+          <input type="text" name="note" class="textarea" placeholder="The client said...">
+        </div>  
+      </div>
+        <div class="has-text-centered mt-5"
+          <div class="field">
+            <button class="button" type="submit" >
+            Submit
+            </button>
+        </div>
+      </div>  
+    </form>
+  </div>
+</div>
+
 <br>
 
 <footer class="footer">

@@ -10,6 +10,14 @@
 	</script>
 </head>
 <body>
+  <!-- Nav bar -->
+	<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ProjectdeSales.kgdowney.repl.co">
+				<p>Project de Sales</p>
+			</a>
+		</div>
+	</nav>
   <section class="hero is-medium is-primary is-bold">
   <div class="hero-body">
     <div class="container">
@@ -22,10 +30,25 @@
     </div>
   </div>
 </section>
-  <form action="/get-client" method="GET">
-    <label for="name" >Client name *</label><br>
-    <input type="text" id="name" name="name" class="textInput" placeholder="John Smith" required>
-    <input type="submit" value="Find Client">
+
+<div class="container is-fluid mt-5">
+  <div class="notification is-primary">
+   
+   <div class="field">
+      <form action="/get-client" method="GET">
+      <label for="name" >Search by client name</label>
+      <br>
+      <input type="text" id="name" name="name" class="input" placeholder="John Smith" required>
+      <div class="has-text-centered mt-5">
+          <div class="field">
+            <button class="button" type="submit" >
+            Search
+            </button>
+        </div>
+    </div>
+  </div>
+</div>
+  
 
     <footer class="footer">
   <div class="content has-text-centered">
