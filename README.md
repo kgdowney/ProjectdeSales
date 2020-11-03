@@ -12,8 +12,6 @@
 npm install && npm start
 ```
 
-### **FRONT-END**
-
 #### ***Bulma is available as an npm package.***
 ```
 // with npm
