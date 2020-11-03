@@ -33,7 +33,7 @@ app.get('/get-client', function (req, res) {
     client.connect(err => {
         client.db("crmdesale").collection("customers").findOne({name: req.query.name}, function(err, result) {
           if (err) throw err;
-          res.render('update', {oldname: result.name, oldaddress: result.address, oldtelephone: result.telephone, oldemail: result.email, oldnote: result.note, name: result.name, address: result.address, telephone: result.telephone, email: result.email, note: result.note});
+          res.render('update', {oldname: result.name, oldaddress: result.address, oldtelephone: result.telephone, oldemail: result.email, oldselect: result.select, oldnote: result.note, name: result.name, address: result.address, telephone: result.telephone, email: result.email,select: result.select, note: result.note});
         });
       });
 });
@@ -46,7 +46,7 @@ app.post('/create', function (req, res, next) {
   client.connect(err => {
     const customers = client.db("crmdesale").collection("customers");
 
-    let customer = { name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, note: req.body.note };
+    let customer = { name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, select: req.body.select,note: req.body.note };
     customers.insertOne(customer, function(err, res) {
       if (err) throw err;
       console.log("1 client inserted")
@@ -58,12 +58,12 @@ app.post('/create', function (req, res, next) {
 app.post('/update', function(req, res) {
   client.connect(err => {
     if (err) throw err;
-    let query = { name: req.body.oldname, address: req.body.oldaddress, telephone: req.body.oldtelephone, email: req.body.oldemail, note: req.body.oldnote };
-    let newvalues = { $set: {name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, note: req.body.note } };
+    let query = { name: req.body.oldname, address: req.body.oldaddress, telephone: req.body.oldtelephone, email: req.body.oldemail, select: req.body.oldselect, note: req.body.oldnote };
+    let newvalues = { $set: {name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, select: req.body.select, note: req.body.note } };
     client.db("crmdesale").collection("customers").updateOne(query, newvalues, function(err, res) {
         if (err) throw err;
         console.log("1 document updated");
-        res.render('update', {message: 'Customer updated!', oldname: req.body.name, oldaddress: req.body.address, oldtelephone: req.body.telephone, oldemail: req.body.email,oldnote: req.body.note, name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, note: req.body.note});
+        res.render('update', {message: 'Client has been updated!', oldname: req.body.name, oldaddress: req.body.address, oldtelephone: req.body.telephone, oldemail: req.body.email,oldselect: req.body.select, oldnote: req.body.note, name: req.body.name, address: req.body.address, telephone: req.body.telephone, email: req.body.email, select: req.body.select, note: req.body.note});
       });
   });
 })
@@ -71,7 +71,7 @@ app.post('/update', function(req, res) {
 app.post('/delete', function(req, res) {
   client.connect(err => {
     if (err) throw err;
-    let query = { name: req.body.name, address: req.body.address ? req.body.address : null, telephone: req.body.telephone ? req.body.telephone : null, email: req.body.email ? req.body.email : null, note: req.body.note ? req.body.note : null };
+    let query = { name: req.body.name, address: req.body.address ? req.body.address : null, telephone: req.body.telephone ? req.body.telephone : null, email: req.body.email ? req.body.email : null, select: req.body.select ? req.body.select : null, note: req.body.note ? req.body.note : null };
     client.db("crmdb").collection("customers").deleteOne(query, function(err, obj) {
       if (err) throw err;
       console.log("1 document deleted");
